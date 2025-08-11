@@ -1,0 +1,33 @@
+:root{
+  --bg:#0b0f14; --panel:#101720; --ink:#e6f1ff; --muted:#9fb3c8;
+  --blue:#3aa3ff; --green:#00d98b; --accent:#3aa3ff; --ring:0 0 0 2px var(--accent);
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:auto;padding:16px}
+.row{display:grid;gap:16px}
+@media (min-width:720px){.row.cols-2{grid-template-columns:1fr 1fr}.row.cols-3{grid-template-columns:repeat(3,1fr)}}
+.card{background:linear-gradient(180deg,#101720,#0f141c);border:1px solid #1b2633;border-radius:14px;padding:16px;box-shadow:0 4px 30px rgba(0,0,0,.25)}
+.card:hover{border-color:#243448}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#051422;padding:10px 14px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+.btn.secondary{background:transparent;border:1px solid #284059;color:var(--ink)}
+.btn:focus-visible{outline:var(--ring)}
+.kbd{font-family:ui-monospace,Menlo,monospace;background:#0c131b;border:1px solid #233043;padding:2px 6px;border-radius:6px}
+.hero{position:relative;overflow:hidden;border-radius:20px;background:
+  radial-gradient(1200px 400px at -10% -10%, #0b2a44 10%, transparent 60%),
+  radial-gradient(1000px 400px at 110% -10%, #062e22 10%, transparent 60%),
+  linear-gradient(180deg, #0a121b, #0b0f14);
+border:1px solid #1b2b3d;padding:28px}
+.hero h1{font-size:clamp(26px,3.5vw,42px);margin:0 0 6px}
+.hero p{color:var(--muted);margin:0 0 14px}
+.badge{background:#0d1925;border:1px solid #213145;color:#a6c6ff;padding:4px 8px;border-radius:999px;font-size:12px}
+.stat{display:flex;flex-direction:column;gap:6px;padding:12px;border-radius:12px;background:#0d1620;border:1px solid #1b2836}
+.progress{height:8px;background:#0c141c;border-radius:999px;overflow:hidden}
+.progress>span{display:block;height:100%;background:linear-gradient(90deg,var(--green),#43ffd5)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,#203043 20%,#203043 80%,transparent);margin:22px 0}
+.ico{width:36px;height:36px;border-radius:50%;display:inline-grid;place-items:center}
+.ico.blue{background:#0f2a44;border:1px solid #2a4f77;color:#82c5ff}
+.ico.green{background:#0d2a1f;border:1px solid #266d53;color:#7bffd2}
+.muted{color:var(--muted)}

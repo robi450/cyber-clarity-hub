@@ -1,0 +1,18 @@
+# --- Node / Vite ---
+node_modules
+dist
+*.local
+
+# --- Python / FastAPI ---
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- OS / Editor ---
+.DS_Store
+.vscode/
+
+# --- Other ---
+*.sqlite3
